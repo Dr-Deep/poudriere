@@ -1,0 +1,271 @@
+body {
+    background-color: #000;
+    color: #eee;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: normal;
+}
+
+html {
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+}
+
+#loading_overlay {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 9003;
+    left: 0;
+    position: fixed;
+}
+#loading {
+    z-index: 9004;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.top-icon {
+    display: none;
+}
+
+.layout,
+.layout th,
+.layout td {
+    border: 0;
+    background-color: #111;
+    color: #eee;
+}
+
+.built {
+    background-color: #007700 !important;
+}
+.built .row1 {
+    background-color: #00cc00;
+}
+.failed {
+    background-color: #770000 !important;
+}
+.failed .row1 {
+    background-color: #cc0000;
+}
+.skipped {
+    background-color: #994400 !important;
+}
+.skipped .row1 {
+    background-color: #bb5500;
+}
+.ignored {
+    background-color: #996600 !important;
+}
+.ignored .row1 {
+    background-color: #cc8800;
+}
+.fetched {
+    background-color: #004400 !important;
+}
+.fetched .row1 {
+    background-color: #007700;
+}
+.remaining {
+    background-color: #222 !important;
+}
+.remaining .row1 {
+    background-color: #333;
+}
+.queued {
+    background-color: #444 !important;
+}
+.queued .row1 {
+    background-color: #555;
+}
+.latest {
+    background-color: #666600;
+}
+
+#header {
+    border-bottom: 1px solid #333;
+    min-height: 65px;
+    background-color: #111;
+    color: #fff;
+}
+
+footer {
+    bottom: 0;
+    max-height: 20px;
+    margin-top: 5px;
+    border-top: 1px solid #333;
+    background-color: #111;
+    color: #eee;
+}
+
+#logo {
+    margin-left: -14px;
+}
+
+#logo img {
+    height: 55px;
+}
+
+.navbar {
+    font-size: 1.3em;
+    background-color: #111;
+    color: #eee;
+}
+
+.navbar-toggle {
+    margin-right: 0;
+}
+
+.navbar-collapse {
+    border-top: 1px solid #333;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ccc;
+}
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+}
+
+@media (max-width: 570px) {
+    body,
+    #header {
+        min-width: 570px;
+    }
+}
+
+@media (max-width: 979px) {
+    .navbar-fixed-top,
+    .navbar {
+        margin-bottom: 0px;
+    }
+}
+
+.layout table {
+    border: 0;
+    width: 480px;
+    margin: 0 0 1px 0;
+    line-height: 1;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.layout th,
+.layout td {
+    font-family: "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+    font-size: 9pt;
+    text-align: center;
+}
+
+#progress,
+#progress td,
+#progress span,
+#progress canvas {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 0;
+}
+
+#progress {
+    margin-left: 1px;
+}
+
+td.highlight {
+    background-color: #1a1a1a !important;
+}
+
+h1 {
+    font-size: 16pt;
+    text-align: center;
+}
+h2 {
+    background-color: #111;
+    color: #eee;
+}
+
+.error {
+    color: red;
+}
+
+.status td,
+#build_info_div dt,
+#build_info_div dd {
+    font-family: "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+    font-size: 13px;
+    line-height: normal;
+    color: #ccc;
+}
+
+#build_info_div dl {
+    margin-bottom: 0;
+}
+
+dd {
+    word-break: break-all;
+}
+
+.nobreak,
+.ports table tbody tr td:nth-child(1),
+#builders_tables tbody tr td:nth-child(1),
+.failed table tbody tr td:nth-child(5),
+.ignored table tbody tr td:nth-child(4),
+#builds_body tr td:nth-child(2),
+#builds_body tr td:nth-child(3),
+#builds_body tr td:nth-child(4),
+#builds_body tr td:nth-child(5),
+#builds_body tr td:nth-child(6),
+#builds_body tr td:nth-child(7),
+#builds_body tr td:nth-child(8),
+#latest_builds_body tr td:nth-child(3),
+#latest_builds_body tr td:nth-child(4),
+#latest_builds_body tr td:nth-child(5),
+#latest_builds_body tr td:nth-child(6),
+#latest_builds_body tr td:nth-child(7),
+#latest_builds_body tr td:nth-child(8),
+#latest_builds_body tr td:nth-child(9) {
+    word-break: normal !important;
+}
+
+.glyphicon {
+    font-size: 0.75em;
+    text-align: top;
+}
+
+table.dataTable.display tbody tr.odd {
+    background-color: #111;
+}
+
+table.dataTable.display tbody tr.odd td.sorting_1 {
+    background-color: #222;
+}
+
+table.dataTable thead th,
+table.dataTable tbody td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+:target {
+    background-color: #222;
+}
